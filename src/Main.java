@@ -4,12 +4,29 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        printEqual(1, 1, 1);
+        printEqual(1, 1, 2);
+        printEqual(-1, -1, -1);
+        printEqual(1, 2, 3);
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    public static void printEqual(int arg1, int arg2, int arg3) {
+
+        if (arg1 < 0 || arg2 < 0 || arg3 < 0) {
+
+            System.out.println("Invalid Value");
+        } else {
+
+            if (arg1 == arg2 && arg2 == arg3) {
+
+                System.out.println("All numbers are equal");
+            } else if (arg1 != arg2 && arg2 != arg3 && arg1 != arg3) {
+
+                System.out.println("All numbers are different");
+            } else {
+
+                System.out.println("Neither all are equal or different");
+            }
         }
     }
 }
